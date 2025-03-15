@@ -1,0 +1,280 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color:#60cbe5;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  color: whitesmoke;  
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);         
+}
+
+header {
+  padding-top: 30px;
+  text-align: center;     
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;   
+  align-items: center;       
+  width: 100%;               
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;    
+  gap: 40px;                 
+  list-style: none;          
+}
+
+ul li {
+  margin: 0;                  
+}
+
+ul li:hover{
+  color: lightgrey;
+}
+
+ul li a {
+  text-decoration: none;     
+  color: inherit;            
+}
+
+.weather-form{
+  width: 100%;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+#city{
+  margin: 0;
+  text-align: left;
+  outline:none;
+  width: 150px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #81D4FA;
+  transition: border 0.3s ease;
+  font-size: 16px;
+}
+
+#city:hover{
+  border-color: #00B8D4;  
+}
+
+.weather-form button{
+  background-color: #00B8D4;  
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.weather-form button:hover{
+  background-color: #007C91; 
+}
+
+.weather-display{
+  background-color: rgba(26, 129, 154, 0.398);
+  width: 95%;
+  min-height: 70%;
+  height: auto;
+  margin: 5vh auto;
+  border-radius: 10px;
+}
+
+#cityName{
+  text-align: center;
+  padding-top: 35px;
+}
+
+.weather-info{
+  display: grid;
+  width: 90%;
+  height: auto;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  gap: 10px;
+}
+.grid{
+  height: 80px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.146);
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.grid:hover {
+  transform: scale(1.05);
+}
+
+.grid p{
+  position: absolute;
+  left: 5px;
+  top: -16px;
+  color: lightslategray;
+  text-shadow:none;
+  font-size: 13px;
+}
+
+.grid span{
+  position: absolute;
+  top: 40%;
+  left: 5px;
+}
+
+#intro-info{
+  text-align: center;
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+  height: 35%;
+  min-height: 200px;
+  background-color: rgba(26, 129, 154, 0.398);
+}
+
+#intro-info{
+  margin-top: 20px;
+}
+
+#intro-info p{
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+
+/* Styles for screens larger than 425px */
+@media (min-width: 426px) {
+  body {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  /* Update layout for wider screens */
+  .weather-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .weather-form input {
+    width: 300px; /* Larger input box */
+    padding: 10px;
+  }
+
+  .weather-form button {
+    padding: 10px 15px;
+    font-size: 1.1em;
+  }
+
+  .weather-display {
+    width: 80%; /* Make the weather display wider */
+    margin: 0 auto;
+  }
+
+  .weather-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+    gap: 15px;
+  }
+
+  .-container.grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust city name and temperature text */
+  #cityName {
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  #temperature {
+    font-size: 3em;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  /* Add responsiveness to the header */
+  header h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  .nav-list ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .nav-list a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+  }
+
+  /* Styling for wind speed, humidity, etc. for wider screens */
+  .weather-info p {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+/* Styles for larger desktop screens */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+    padding: 30px;
+  }
+
+  .weather-form {
+    max-width: 900px;
+    margin:5vh auto;
+  }
+
+  .weather-form input {
+    width: 70%;
+  }
+
+  .weather-form button {
+    padding: 15px 20px;
+  }
+
+  .weather-display {
+    width: 60%;
+    margin: 5vh auto;
+  }
+
+  .weather-info {
+    grid-template-columns: repeat(2, 1fr); /* Three columns layout for larger screens */
+  }
+
+  #cityName {
+    font-size: 35px;
+  }
+
+  #temperature {
+    font-size: 65px;
+  }
+
+
+  .nav-list ul {
+    gap: 30px;
+  }
+
+  .weather-info p {
+    font-size: 18px;
+  }
+}
+

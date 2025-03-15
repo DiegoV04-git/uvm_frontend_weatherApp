@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Weather App</title>
+
+  <!-- Import Google Fonts -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  </style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Is It Raining? App</h1>
+    <div class="nav-list">
+      <ul class="option-list">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Weather</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Weather Form Section -->
+  <div class="weather-form">
+    <input type="text" id="city" placeholder="Enter City">
+    <button id="get-weather-btn">Get Weather</button>
+  </div>
+
+  <div id="intro-info" style="display: block;" >
+    <h1>UVM PROJECT</h1>
+    <p id="weather-fact"></p>
+  </div>
+
+
+
+  <!-- Weather Display Section -->
+  <div class="weather-display" style="display:none;" id="weather-display">
+    <h2 id="cityName">langley</h2>
+    <p style="text-align: center; font-size: 2.5em">
+      <span id="temperature">44</span>
+    </p>
+    <div class="weather-info">
+      <!-- Additional weather information can go here -->
+      <div class="-container grid">
+       <p>CONDITION</p>
+       <span id="description">SPAN</span>
+      </div>
+      <div class="-container grid">
+        <p>FEELS LIKE</p>
+        <span id="feelsLike"></span>
+      </div>
+      <div class="-container grid">
+        <p>HUMIDITY</p>
+        <span id="humidity"></span>
+      </div>
+      <div class="-container grid">
+        <p>WIND SPEED</p>
+        <span id="windSpeed"></span>
+      </div>
+      <div class="-container grid">
+        <p>WIND DIRECTION</p>
+        <span id="windDirection"></span>
+      </div>
+      <div class="-container grid">
+        <p>PRESSURE</p>
+        <span id="pressure"></span>
+      </div>
+      <div class="-container grid">
+        <p>VISIBILITY</p>
+        <span id="visibility"></span>
+      </div>
+      <div class="-container grid">
+        <p>UV Index</p>
+        <span id="uvIndex"></span>
+      </div>
+      <div class="-container grid">
+        <p>SUNRISE</p>
+        <span id="sunrise"></span>
+      </div>
+      <div class="-container grid">
+        <p>SUNSET</p>
+        <span id="sunset"></span>
+      </div>
+  </div>
+  <!-- Link to External JavaScript File -->
+  <script src="frontend.js" defer></script>
+</body>
+
+</html>
